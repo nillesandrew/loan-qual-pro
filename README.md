@@ -41,8 +41,10 @@ Finished! Exmaple of output.
 ---
 
 ## Contributors
-####Andrew Nilles
-Challege #2 submission for DU Fintech Bootcamp
+
+-Andrew Nilles
+
+Challenge #2 submission for DU Fintech Bootcamp
 
 Special thanks to Katie and Albion
 
