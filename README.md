@@ -23,7 +23,7 @@ Before using, install the following dependencies.
 ```python
   pip install fire
   pip install questionary
-
+```
 ## Usage
 
 This section should include screenshots, code blocks, or animations explaining how to use your project.
