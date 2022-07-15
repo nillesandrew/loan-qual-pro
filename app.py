@@ -9,6 +9,7 @@ Example:
 import sys
 import fire
 import questionary
+import csv
 from pathlib import Path
 
 from qualifier.utils.fileio import load_csv
@@ -24,14 +25,14 @@ from qualifier.filters.debt_to_income import filter_debt_to_income
 from qualifier.filters.loan_to_value import filter_loan_to_value
 
 
+
 def load_bank_data():
     """Ask for the file path to the latest banking data and load the CSV file.
 
     Returns:
         The bank data from the data rate sheet CSV file.
     """
-
-    csvpath = questionary.text("Enter a file path to a rate-sheet (.csv):").ask()
+    csvpath = questionary.text("Enter file path to rate sheet").ask()
     csvpath = Path(csvpath)
     if not csvpath.exists():
         sys.exit(f"Oops! Can't find this path: {csvpath}")
@@ -111,6 +112,28 @@ def save_qualifying_loans(qualifying_loans):
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
 
+    # Ask user to create a Path for CSV output
+    csvpath = questionary.text("Enter file path to save spreadsheet of qualified loans:").ask()
+    csvpath = Path(csvpath)
+
+# Set the output headers
+    header = ["Bank data", "Credit score", "Debt", "Income", "Loan", "Home_value"]
+
+    
+
+    print("Writing the data to a CSV file...")
+# Open the output CSV file path using `with open`
+    with open(csvpath, "w") as csvfile:
+    # Create a csvwriter
+        csvwriter = csv.writer(csvfile, delimiter=",")
+
+    # Write the header to the CSV file
+        csvwriter.writerow(header)
+
+    # Write the values of each dictionary inside of `big_raisers`
+    # as a row in the CSV file.
+        for row in qualifying_loans:
+            csvwriter.writerow(row)
 
 def run():
     """The main function for running the script."""
