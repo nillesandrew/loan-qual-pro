@@ -12,19 +12,27 @@ This project leverages python 3.7 with the following packages:
 
 * [questionary](https://github.com/tmbo/questionary) - For interactive user prompts and dialogs
 
-* []
 ---
 
 ## Installation Guide
 
 In this section, you should include detailed installation notes containing code blocks and screenshots.
 
----
+Before using, install the following dependencies.
+
+```python
+  pip install fire
+  pip install questionary
 
 ## Usage
 
 This section should include screenshots, code blocks, or animations explaining how to use your project.
-
+![Launch the program](1.PNG)
+![Enter in the path to the rate sheets](2.PNG)
+![enter in customers loan application information](3.PNG)
+![Enter file path for output spreadsheet of qualified banks](5.PNG)
+![Finished!](7.PNG)
+![Exmaple of output](8.PNG)
 ---
 
 ## Contributors
