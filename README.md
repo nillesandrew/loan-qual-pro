@@ -24,7 +24,7 @@ Before using, install the following dependencies.
 ```
 ## Usage
 
-This section should include screenshots, code blocks, or animations explaining how to use your project.
+
 ![Launch the program & Enter in the path to the rate sheets](2.PNG)
 Launch the program & Enter in the path to the rate sheets.
 
@@ -35,10 +35,9 @@ Enter in customers loan application information.
 Enter file path for output spreadsheet of qualified banks.
 
 ![Finished!](7.PNG)
-Finished!
+Finished! Exmaple of output.
 
-![Exmaple of output](8.PNG)
-Exmaple of output.
+
 ---
 
 ## Contributors
